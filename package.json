@@ -7,9 +7,9 @@
   "scripts": {
     "start": "nodemon index.js",
     "start:replace": "nodemon -x npm run generate",
-    "view": "http-server ./html",
+    "view": "http-server ./output",
     "format": "prettier --write .",
-    "generate": "node index.js --silent > data-url.txt && node ./scripts/replace-data-url.js"
+    "generate": "node index.js --silent > output/data-url.txt && node ./scripts/replace-data-url.js"
   },
   "keywords": [],
   "author": "",
