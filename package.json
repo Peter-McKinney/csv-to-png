@@ -1,0 +1,24 @@
+{
+  "name": "csv-to-png",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js",
+    "start:replace": "nodemon -x npm run generate",
+    "format": "prettier --write .",
+    "generate": "node index.js --silent > data-url.txt && node ./scripts/replace-data-url.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "prettier": "^3.0.3"
+  }
+}
